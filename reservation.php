@@ -92,7 +92,7 @@ if(isset($_POST['valider']))
 	}
 
 	echo "<br/><br/><br/><br/><br/><br/>";
-
+	
 	$reservation = $bdd->prepare('SELECT rang, reserver FROM salle');
 
 	$reservation->execute(array('rang', 'reserver'));
@@ -100,9 +100,8 @@ if(isset($_POST['valider']))
 
 
 	
-	echo "      ";
-	for($i=1;$i<10;$i++){
-			// 
+			for($i=0;$i<10;$i++){
+			
 	        echo "<strong>" . "[" . $i . "]" . "</strong>";
 	}
 			echo "<br/>";
